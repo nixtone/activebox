@@ -281,6 +281,33 @@ header {
 	}
 }
 
+#testimonials {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	min-height: 500px;
+	.preview_area {
+		position: relative;
+		.preview {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	.slider_area {
+		background: var(--color7);
+		padding: 110px 85px;
+		color: var(--color3);
+		.speech {
+			font-family: Cardo;
+			font-size: 2em;
+		}
+		.name {
+			font-weight: bold;
+			margin-top: 20px;
+		}
+	}
+}
+
 #scroll_top {
 	position: fixed;
 	right: 15px;
