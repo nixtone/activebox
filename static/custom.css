@@ -177,6 +177,26 @@ header {
 	}
 }
 
+#features {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+		text-align: center;
+		gap: 75px;
+		h2 {
+			text-transform: uppercase;
+			font-size: 0.85em;
+			color: var(--color5);
+			margin: 27px 0 17px;
+		}
+		.descr {
+			color: var(--color6);
+			font-size: 0.9em;
+			line-height: 21px;
+		}
+	}
+}
+
 #scroll_top {
 	position: fixed;
 	right: 15px;
