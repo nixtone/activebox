@@ -308,6 +308,22 @@ header {
 	}
 }
 
+#download {
+	text-align: center;
+	color: var(--color5);
+	.row.c1 {
+		font-size: 1.75em;
+		margin-bottom: 10px;
+		font-weight: 300;
+	}
+	.row.c2 {
+		text-transform: uppercase;
+		font-size: 0.8em;
+		font-weight: bold;
+		margin-bottom: 40px;
+	}
+}
+
 #scroll_top {
 	position: fixed;
 	right: 15px;
