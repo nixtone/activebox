@@ -1,0 +1,149 @@
+:root {
+	--color1: #e84545;
+	--color2: #f75c5c;
+	--color3: #fff;
+	--color4: #cfd0d4;
+	--color5: #454749;
+	--color6: #6c7279;
+	--color7: #53354a;
+	--color8: #3a3e64;
+	--color9: #313454;
+	--color10: #808080;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cardo';
+    src: url('fonts/Cardo-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* Структура */
+
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	font-family: 'Raleway';
+}
+#wrapper {
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
+}
+.wide {
+	padding: 50px 0;
+	margin: 50px 0;
+}
+
+.container {
+  --max-width: 1170px; /* Задать ширину блоков */
+  --padding-side: 15px;
+  width: min(var(--max-width), 100% - var(--padding-side) * 2);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Атомарные классы */
+
+.bimg, .bimg img {
+	display: block;
+	width: 100%;
+}
+
+.btn {
+	background-color: var(--color1);
+	text-decoration: none;
+	color: var(--color3);
+	padding: 15px 80px;
+	display: inline-block;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: 600;
+	transition: .3s;
+	&:hover {
+		background-color: var(--color2);
+	}
+	&.s1 {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+.socnet {
+	display: flex;
+	gap: 4px;
+	.sn {
+		display: grid;
+		place-items: center;
+		border: 1px solid;
+		padding: 2px;
+		width: 40px;
+		height: 40px;
+		box-sizing: border-box;
+		transition: .3s;
+	}
+}
+
+
+/* Каскадный БЭМ */
+
+
+
+#scroll_top {
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 1;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0,0,0,0.2);
+	cursor: pointer;
+	border-radius: 4px;
+	transition: .3s;
+	fill: #000;
+	&:hover {
+		background-color: rgba(0,0,0,0.8);
+		path {
+			fill: #fff;
+		}
+	}
+}
