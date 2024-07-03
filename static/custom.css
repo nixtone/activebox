@@ -197,6 +197,41 @@ header {
 	}
 }
 
+#works {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1px;
+	.item {
+		position: relative;
+		.label {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			background: rgba(232, 69, 69, 0.9);
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: var(--color3);
+			.title {
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 0.8em;
+				letter-spacing: 0.06em;
+				margin-bottom: 10px;
+			}
+			.descr {
+				font-size: 0.845em;
+				letter-spacing: 0.02em;
+			}
+		}
+		&:hover .label {
+			display: flex;
+		}
+	}
+}
+
 #scroll_top {
 	position: fixed;
 	right: 15px;
