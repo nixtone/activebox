@@ -232,6 +232,55 @@ header {
 	}
 }
 
+#team {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+		gap: 15px;
+		.preview_area {
+			overflow: hidden;
+			.preview {
+				transition: .3s;
+			}
+		}
+		.item:hover .preview {
+			transform: scale(1.1);
+		}
+		.name {
+			font-size: 1.4em;
+			font-weight: normal;
+			margin: 26px 0 8px;
+		}
+		.status {
+			color: var(--color1);
+			text-transform: uppercase;
+			font-size: 0.8em;
+			margin-bottom: 21px;
+		}
+		.text {
+			color: var(--color6);
+			line-height: 21px;
+			margin-bottom: 27px;
+			font-size: 0.9em;
+		}
+		.socnet {
+			.sn {
+				border-color: var(--color4);
+				svg {
+					fill: var(--color4);
+				}
+				&:hover {
+					border-color: var(--color5);
+					background-color: var(--color5);
+					svg {
+						fill: var(--color3);
+					}
+				}
+			}
+		}
+	}
+}
+
 #scroll_top {
 	position: fixed;
 	right: 15px;
